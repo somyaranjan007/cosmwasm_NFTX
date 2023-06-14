@@ -17,5 +17,5 @@ pub struct Vault {
 
 pub const STATE: Item<State> = Item::new("contract_owner");
 
-pub const USER_VAULTS: Map<&str, Vec<u64>> = Map::new("user_vaults");
+pub const USER_VAULTS: Map<String, Vec<u64>> = Map::new("user_vaults");
 pub const VAULT_LIST: Item<Vec<Vault>> = Item::new("vault_list");

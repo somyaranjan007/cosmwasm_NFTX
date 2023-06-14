@@ -14,16 +14,16 @@ pub enum ExecuteMsg {
 #[cw_serde]
 #[derive(QueryResponses)]
 pub enum QueryMsg {
-    #[returns(GetVaultResponse)]
-    GetVault { vault_owner: Addr }, 
+    #[returns(GetVaultIdResponse)]
+    GetVaultId { vault_owner: Addr }, 
 
     #[returns(GetVaultArrayResponse)]
     GetVaultArray {},
 }
 
 #[cw_serde]
-pub struct GetVaultResponse {
-    pub vault_response: Vec<Vault>
+pub struct GetVaultIdResponse {
+    pub vault_id_response: Vec<u64>
 }
 
 #[cw_serde]

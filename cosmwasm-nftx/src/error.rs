@@ -9,8 +9,12 @@ pub enum ContractError {
 
     #[error("Unauthorized")]
     Unauthorized {},
-    // Add any other custom errors you like here.
-    // Look at https://docs.rs/thiserror/1.0.21/thiserror/ for details.
+
+    #[error("User Doesn't Have Any Vault")]
+    UserVaultNotFound {},
+
+    #[error("Vault Not Found")]
+    VaultNotFound {},
 }
 
 impl Serialize for ContractError {
